@@ -38,7 +38,6 @@ public class DataService {
         while ((line=bf.readLine())!=null) {
             outStr.append(line);
         }
-        //System.out.println("Output String lenght : " + outStr.length());
         return outStr.toString();
     }
 
@@ -55,23 +54,13 @@ public class DataService {
                 .retrieve();
 
         ResponseEntity<byte[]> res = response.toEntity(byte[].class).block();
-
-
-
-
-
         String a = decompress(Objects.requireNonNull(res.getBody()));
-
-
         String jsonPrettyPrintString = "";
         try {
-
-
             String TEST_XML_STRING = a;
 
             JSONObject xmlJSONObj = XML.toJSONObject(TEST_XML_STRING);
              jsonPrettyPrintString = xmlJSONObj.toString(PRETTY_PRINT_INDENT_FACTOR);
-            //System.out.println(jsonPrettyPrintString);
         } catch (JSONException je) {
             System.out.println(je);
         }

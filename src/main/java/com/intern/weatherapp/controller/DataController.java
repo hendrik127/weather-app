@@ -24,10 +24,6 @@ public class DataController {
         this.dataService = dataService;
     }
 
-    @GetMapping("/hellomessage")
-    public String getHello(){
-        return "Hello, world!";
-    }
 
     @GetMapping(value = "/weather",produces = MediaType.APPLICATION_JSON_VALUE)
     public String getWeatherData() throws Exception {

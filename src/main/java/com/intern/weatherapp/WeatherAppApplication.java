@@ -27,9 +27,6 @@ public class WeatherAppApplication {
                        .followRedirect(true)
 
                 ))
-
-
-                //.defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.TEXT_HTML_VALUE)
                 .build();
 
 

@@ -45,7 +45,7 @@
                 <p>                  {{location.phenomenon}}
                 </p>
               </td>
-              <td>{{ location.tempmin }}</td>
+              <td>{{ location.tempmin +"°C"}}</td>
 
             </tr>
 
@@ -124,7 +124,7 @@
               <p>                  {{location.phenomenon}}
               </p>
             </td>
-            <td>{{ location.tempmax }}</td>
+            <td>{{ location.tempmax +"°C"}}</td>
 
           </tr>
 
