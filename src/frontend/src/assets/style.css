@@ -1,0 +1,277 @@
+
+.datacol{
+    margin: 0rem  1rem;
+
+    flex: 1;
+    text-align: left;
+}
+
+.description{
+    margin-top: 2rem;
+    padding: 1rem;
+    background: white;
+    left: 0;
+
+    border-radius: 18px;
+}
+
+.desktopwrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 50px;
+    flex-direction: column;
+
+}
+
+.desktop{
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+.mobile{
+
+    display: none;
+
+}
+
+@media only screen and (max-width: 820px) {
+    .mobile{
+
+        display: block;
+
+    }
+}
+
+
+
+@media only screen and (max-width: 820px) {
+    .desktop{
+        display: none;
+    }
+}
+
+.rotation1{
+    rotate: 0deg;
+}
+
+.rotation2{
+    rotate: 45deg;
+}
+.rotation3{
+    rotate: 90deg;
+}
+.rotation4{
+    rotate: 135deg;
+}
+.rotation5{
+    rotate: 180deg;
+}
+
+.rotation6{
+    rotate: 225deg;
+}
+.rotation7{
+    rotate: 270deg;
+}
+
+.rotation8{
+    rotate: 315deg;
+}
+
+.hide{
+    display: none;
+}
+
+
+.activecard{
+    background: #FDFDFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+    padding: 0 1rem 1rem 1rem;
+    text-align: left;
+
+
+}
+
+.place{
+
+    text-alignt: center;
+    background-color: white;
+    border-radius: 20px;
+    margin: 5%;
+
+    width: 40%;
+
+
+}
+
+.paragraphcontainer{
+    /*//margin: 10%;*/
+
+}
+
+
+
+img.inverted { /* svg on an img tag */
+    -webkit-filter: invert(1); /* safari 6.0 - 9.0 */
+    filter: invert(1);
+}
+
+
+.container{
+
+    elevation: 200deg;
+    border-radius: 20px;
+
+    margin-bottom: 0;
+
+
+}
+
+
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+
+
+}
+
+.nowraprow{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+
+
+}
+
+.daynnite{
+
+    /*text-align: center;*/
+
+    color: white;
+
+
+    margin-top: 5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+
+}
+
+.night{
+    background-color: black;
+
+    border-radius: 20px;
+
+}
+.nighttext{
+}
+
+.day{
+
+    border-radius: 20px ;
+
+    background: linear-gradient(180deg, #5A94E8 0%, #79B0F0 100%);
+
+
+}
+
+.cardtemp{
+    margin-top: 0;
+    margin-right: 1rem;
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+
+@font-face {
+    font-family: maven;
+    src: url('~@/assets/fonts/Maven_Pro/static/MavenPro-Medium.ttf');
+}
+
+div{
+    font-family: maven;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonl{
+    font-family: maven;
+
+    border-radius:   12px  0 0 12px ;
+    border: 0;
+
+    width: 100px;
+}
+
+.buttonr{
+    font-family: maven;
+
+    border-radius: 0  12px 12px 0 ;
+    border: 0;
+
+    width: 100px;
+}
+
+.red{
+    background-color: lightgray;
+
+}
+.green{
+    background-color: dimgrey;
+
+}
+
+html,body{
+    height: 100%;
+    background: #E3E3E3;
+}
+
+.desktopwrapper{
+
+  display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+.daynnite{
+    elevation: 100deg;
+    padding: 1rem 2rem;
+
+
+}
+.day{
+
+}
+.night{
+}
+.mode{
+    font-size: 16px;
+}
+
+.icon{
+    height: 40px;
+    width: 40px;
+}

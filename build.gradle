@@ -1,0 +1,115 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.3'
+    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+    id 'java'
+    id "com.github.node-gradle.node" version "3.4.0"
+
+}
+
+group = 'com.hendrik.intern'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+//node {
+//    // Whether to download and install a specific Node.js version or not
+//    // If false, it will use the globally installed Node.js
+//    // If true, it will download node using above parameters
+//    // Note that npm is bundled with Node.js
+//    download = true
+//
+//    // Version of node to download and install (only used if download is true)
+//    // It will be unpacked in the workDir
+//    version = "16.13.0"
+//
+//    // Version of npm to use
+//    // If specified, installs it in the npmWorkDir
+//    // If empty, the plugin will use the npm command bundled with Node.js
+//    npmVersion = "8.13.2"
+//
+//    // Version of Yarn to use
+//    // Any Yarn task first installs Yarn in the yarnWorkDir
+//    // It uses the specified version if defined and the latest version otherwise (by default)
+//    yarnVersion = ""
+//
+//    // Base URL for fetching node distributions
+//    // Only used if download is true
+//    // Change it if you want to use a mirror
+//    // Or set to null if you want to add the repository on your own.
+//    distBaseUrl = "https://nodejs.org/dist"
+//
+//    // Specifies whether it is acceptable to communicate with the Node.js repository over an insecure HTTP connection.
+//    // Only used if download is true
+//    // Change it to true if you use a mirror that uses HTTP rather than HTTPS
+//    // Or set to null if you want to use Gradle's default behaviour.
+//    allowInsecureProtocol = null
+//
+//    // The npm command executed by the npmInstall task
+//    // By default it is install but it can be changed to ci
+//    npmInstallCommand = "install"
+//
+//    // The directory where Node.js is unpacked (when download is true)
+//    workDir = file("${project.projectDir}/src/frontend/nodejs")
+//
+//    // The directory where npm is installed (when a specific version is defined)
+//    npmWorkDir = file("${project.projectDir}/src/frontend/npm")
+//
+//
+//    // The Node.js project directory location
+//    // This is where the package.json file and node_modules directory are located
+//    // By default it is at the root of the current project
+//    nodeProjectDir = file("${project.projectDir}/src/frontend")
+//
+//    // Whether the plugin automatically should add the proxy configuration to npm and yarn commands
+//    // according the proxy configuration defined for Gradle
+//    // Disable this option if you want to configure the proxy for npm or yarn on your own
+//    // (in the .npmrc file for instance)
+//    nodeProxySettings = ProxySettings.SMART
+//}
+//
+//task npmInstallDependencies(type: NpmTask){
+//    dependsOn 'npmSetup'
+//
+//    execOverrides{
+//        it.ignoreExitValue = true
+//        it.workingDir = 'src/frontend'
+//    }
+//    args = ['install']
+//}
+//
+//task npmBuild(type: NpmTask){
+//    dependsOn 'npmInstallDependencies'
+//    execOverrides{
+//        it.workingDir = 'src/frontend'
+//    }
+//    args = ['run','build']
+//}
+//
+//task copyFrontendToBuild(type: Copy){
+//    dependsOn 'npmBuild'
+//    from "$projectDir/src/frontend/dist"
+//    into "$buildDir/resources/main/static"
+//}
+//
+//processResources{
+//    dependsOn 'copyFrontendToBuild'
+//}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.json:json:20220320'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:2.7.3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+    implementation 'org.brotli:dec:0.1.1'
+
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
