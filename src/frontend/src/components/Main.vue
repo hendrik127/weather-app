@@ -55,7 +55,7 @@ export default {
 
 
 
-  name: 'HelloWorld',
+  name: 'Main',
   components: {DescriptionBlock, SecondaryForecast},
 
   data(){
